@@ -1,0 +1,49 @@
+//
+// Background
+//
+@rgba-background: .5;
+
+.rgba-background(@color, @alpha: @rgba-background) {
+  background: @color;
+  @hue: hue(@color);
+  @saturation: saturation(@color);
+  @lightness: lightness(@color);
+  background: hsla(@hue, @saturation, @lightness, @alpha);
+}
+
+// 半透明边框
+.border-translucence(@alpha: 0.5, @background: white, @border: 10px) {
+  border: 10px solid hsla(0, 0%, 100%,  @alpha);
+  background: @background;
+  box-sizing: content-box;
+  background-clip: content-box;
+}
+
+.border-outline(@background: rgb(35, 36, 34), @border: 1px dashed #fff) {
+  background: @background;
+  border: @border;
+  box-sizing: content-box;
+  outline: 15px solid @background;
+}
+
+.border-shadow(@background1) {
+  box-shadow: 0 0 0 @background1;
+}
+
+.border-shadow(@background1, @background2) {
+  box-shadow: 0 0 0 @background1,
+              0 0 0 @background2;
+}
+
+.border-shadow(@background1, @background2, @background3) {
+  box-shadow: 0 0 0 10px @background1,
+              0 0 0 15px @background2,
+              0 0 0 25px @background3;
+}
+
+.border-shadow(@background1, @background2, @background3, @background4) {
+  box-shadow: 0 0 0 10px @background1,
+              0 0 0 15px @background2,
+              0 0 0 25px @background3,
+              0 0 0px 35px @background4;
+}

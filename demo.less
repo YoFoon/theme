@@ -1,0 +1,29 @@
+@import 'theme/index';
+
+.themes();
+
+.blue() {
+    @parallel-step-bg: #1D6AA7;
+    @arrow-border: #1D6AA7;
+    @arrow-bg: #1D6AA7;
+    @process-finish: #6CA4CD;
+    @process-process: #fff;
+    @process-wait: #9EA0B6;
+}
+
+.white() {
+    @parallel-step-bg: #ffffff;
+    @arrow-border: #ddd;
+    @arrow-bg: #fff;
+    @process-finish: #6CA4CD;
+    @process-process: #6CA4CD;
+    @process-wait: #9EA0B6;
+}
+
+.index() {
+    .parallel-step-pop {
+        .ant-popover-inner {
+            border-radius: 2px;
+        }
+    }
+}
